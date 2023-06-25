@@ -1,0 +1,387 @@
+/* 
+font-family: 'Oswald', sans-serif;
+font-family: 'Pacifico', cursive;
+font-family: 'Source Serif Pro', serif; 
+*/
+
+
+/* ANCHOR html ----------------------------------------------------------*/
+
+:root {
+    --neutral_color_1: #FFFFFF;
+    --neutral_color_2: #111111;
+    --main_color: #119684;
+    --second_color: #6dd4ee;
+    --highlight_color: #ffef16;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    font-family: 'Source Serif Pro', serif;
+    background-image: url(../images/background.jpg);
+    background-color: var(--second_color);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    min-width: 300px;
+}
+
+
+/* ANCHOR style ----------------------------------------------------------*/
+
+h1 {
+    font-family: 'Pacifico', cursive;
+    font-size: 2.4rem;
+    font-weight: 200;
+    color: var(--neutral_color_2);
+}
+
+h2 {
+    font-family: 'Pacifico', cursive;
+    font-size: 6rem;
+    font-weight: 200;
+    color: var(--neutral_color_1);
+    text-shadow: 5px 3px var(--neutral_color_2);
+}
+
+h3 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    font-weight: 200;
+    color: var(--neutral_color_1);
+    text-shadow: 3px 2px var(--neutral_color_2);
+}
+
+h4 {
+    font-family: 'Pacifico', cursive;
+    font-size: 1.6rem;
+    font-weight: 200;
+    font-style: normal;
+    color: var(--main_color);
+}
+
+em {
+    font-family: 'Pacifico', cursive;
+    color: var(--main_color);
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: unset;
+}
+
+#mainnav a:hover {
+    color: var(--main_color);
+}
+
+p {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 1.125rem;
+}
+
+
+/* ANCHOR Header ----------------------------------------------------------*/
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--neutral_color_1);
+    border-bottom: 3px solid var(--neutral_color_2);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: fit-content;
+    padding: 0.2rem 3rem;
+    z-index: 1;
+}
+
+
+/* ANCHOR header / nav ------------------------------------------------------*/
+
+#mainnav li {
+    font-family: 'Oswald', sans-serif;
+    list-style: none;
+    display: inline;
+    padding-left: 2rem;
+    font-size: 1.375rem;
+}
+
+
+/* ANCHOR main ----------------------------------------------------------*/
+
+main {
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+}
+
+
+/* ANCHOR section ----------------------------------------------------------*/
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+}
+
+section h3 {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    width: 100%;
+}
+
+
+/* ANCHOR hero -----------------------------------------------------*/
+
+section.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 8rem;
+    text-align: justify;
+}
+
+section.hero p {
+    width: 50%;
+    font-size: 1.25rem;
+    color: var(--neutral_color_2);
+    background: var(--neutral_color_1);
+    padding: 1rem;
+    border: 3px solid var(--neutral_color_2);
+}
+
+
+/* ANCHOR campsite, team -----------------------------------------------------*/
+
+section.campsite,
+section.team {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100%;
+}
+
+section.campsite div,
+section.team div {
+    display: flex;
+    flex-direction: column;
+    max-width: 20rem;
+    height: 25rem;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: var(--neutral_color_1);
+    border: 3px solid var(--neutral_color_2);
+}
+
+section.campsite div img,
+section.team div img {
+    width: 100%;
+    height: 12rem;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid var(--neutral_color_2);
+}
+
+
+/* ANCHOR location_contact -----------------------------------------------------*/
+
+section.location_contact {
+    flex-wrap: wrap;
+    margin-top: 0;
+    width: 100%;
+    height: auto;
+}
+
+section.location,
+section.contact {
+    min-width: 50%;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 30rem;
+}
+
+section.location_contact div {
+    width: 35rem;
+    margin: 2rem;
+    padding: 1rem;
+    background-color: var(--neutral_color_1);
+    border: 3px solid var(--neutral_color_2);
+}
+
+section.location_contact div img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+    border: 3px solid var(--neutral_color_2);
+}
+
+
+/* ---------------------------------------------------------- */
+
+section.campsite div p,
+section.team div p,
+section.location div p,
+section.contact div p {
+    text-align: justify;
+    padding-top: 1rem;
+}
+
+
+/* ---------------------------------------------------------- */
+
+a img:hover {
+    filter: sepia(1) hue-rotate(120deg);
+}
+
+
+/* ---------------------------------------------------------- */
+
+a.information {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.375rem;
+    font-weight: 200;
+    float: right;
+}
+
+a.information:hover {
+    color: var(--main_color);
+    font-weight: 200;
+}
+
+
+/* ANCHOR Footer ----------------------------------------------------------*/
+
+
+/* ANCHOR Button ----------------------------------------------------------*/
+
+button#booknow {
+    font-size: 1.6rem;
+    font-weight: 700;
+    height: 7rem;
+    width: 7rem;
+    padding: 0.8rem;
+    color: var(--neutral_color_2);
+    background-color: var(--highlight_color);
+    border: 3px solid var(--neutral_color_2);
+    border-radius: 50%;
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    transform: rotate(15deg);
+}
+
+button#booknow:hover {
+    background-color: var(--main_color);
+    color: var(--neutral_color_1);
+    cursor: pointer;
+}
+
+section.footer {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--neutral_color_1);
+    border-top: 3px solid var(--neutral_color_2);
+    height: fit-content;
+    padding: 1rem;
+}
+
+section.footer h4 {
+    margin-bottom: 1rem;
+}
+
+section.footer p {
+    text-align: center;
+    line-height: 2rem;
+    font-style: normal;
+}
+
+a.mail {
+    font-family: 'Oswald', sans-serif;
+}
+
+a.mail:hover {
+    color: var(--main_color);
+}
+
+
+/* ANCHOR media queries max 1024px ----------------------------------------------------------*/
+
+@media only screen and (max-width: 1024px) {
+    h1 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    h2 {
+        font-size: 3.5rem;
+    }
+    h3 {
+        font-size: 2rem;
+    }
+    header {
+        flex-direction: column;
+    }
+    #mainnav li {
+        padding-left: 0.8rem;
+        font-size: 1.125rem;
+    }
+    section.campsite div,
+    section.team div,
+    section.location_contact div {
+        margin: 1.4rem;
+    }
+    section {
+        margin-top: 3rem;
+    }
+    section.footer {
+        padding: 0.4rem;
+    }
+    section.footer h4 {
+        margin-bottom: 0.15rem;
+        font-size: 1.2rem;
+    }
+    section.footer p {
+        line-height: 1.25rem;
+        font-size: 0.75rem;
+    }
+    button#booknow {
+        font-size: 1.25rem;
+        height: 5rem;
+        width: 5rem;
+        padding: 0.8rem;
+        bottom: 1.25rem;
+        right: 1.25rem;
+    }
+}
+
+
+/* ANCHOR media queries max 600px ----------------------------------------------------------*/
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 1.6rem;
+        padding-bottom: 0.3rem;
+    }
+    #mainnav li {
+        font-size: 1.25rem;
+        display: block;
+        text-align: center;
+        line-height: 1.75rem;
+    }
+    section.hero {
+        margin-top: 12rem;
+    }
+}
